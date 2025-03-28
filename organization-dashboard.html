@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Organization Dashboard</h2>
+        
+        <!-- Show the Add Organization button -->
+        <button onclick="showAddOrganizationForm()">Add Organization</button>
+
+        <!-- The form to add organization details (initially hidden) -->
+        <div id="addOrganizationForm" style="display: none;">
+            <h3>Enter Your Organization Details</h3>
+            <input type="text" id="orgName" placeholder="Organization Name">
+            <input type="text" id="orgType" placeholder="Organization Type (e.g., Non-profit)">
+            <input type="text" id="orgAddress" placeholder="Organization Address">
+            <input type="text" id="orgContact" placeholder="Organization Contact Number">
+            <textarea id="orgDescription" placeholder="Describe your organization"></textarea>
+            <button onclick="saveOrganization()">Save Organization</button>
+        </div>
+
+        <!-- Show the Request Volunteers button after saving organization details -->
+        <div id="requestVolunteersSection" style="display: none;">
+            <button onclick="requestVolunteers()">Request Volunteers</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
